@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Online App Diary System</title>
+    <link rel="stylesheet" href="../assets/main.css" /> 
+    <script src="../scripts/jquery-1.10.2.min.js"></script>
+    <script src="../scripts/jquery.signalR-2.1.2.min.js"></script>
+    <script src="../signalr/js"></script>
+    <script src="../scripts/Myappds.js"></script>
+</head>
+<body>
+    <a href="../Index.aspx">Log out</a>
+    <hr />
+    <h1>AppDS(Online)</h1>
+    <section id="todo">
+        <div>
+            <ol>
+                <li>New Organisation.</li>
+                <li>New Branch.</li>
+                <li>Join the organisation.</li>
+                <li>Join the branch.</li>
+                <li>Send messages to organisation.</li>
+                <li>Send messages to your branch.</li>
+                <li>Make appointments.</li>
+                <li>View messages.</li>
+                <li>View appointments.</li>
+            </ol>
+        </div>
+    </section>
+    <h2>Say Hello.</h2>
+    <div id="frmMs"></div>
+    <form class="frmHello" name="frmH" action="../views/inbox.html">
+        <p></p>
+        <div>
+            <output id="lblname"></output>
+            <input type="text" name="txtName" id="txtName" placeholder="Name" readonly />
+            <label for="txtName">Name:</label>
+        </div>
+        <p></p>
+        <div>
+            <output id="lblcode"></output>
+            <input type="text" name="txtCode" id="txtCode" placeholder="Code" readonly />
+            <label for="txtCode">Code:</label>
+        </div>
+        <p></p>
+        <div>
+            <output id="lblType"></output>
+            <input type="text" name="txtType" id="txtType" placeholder="Type" readonly />
+            <label for="txtType">Type:</label>
+        </div>
+        <p></p>
+        <div id="dvOrg">
+            <output id="lblorg"></output>
+            <input type="text" name="txtOrg" id="txtOrg" maxlength="100" placeholder="Organisation" />
+            <label for="txtOrg">Organisation:</label>
+            <select id="selOrgC">
+                <option selected="selected" value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+                <option value="red">Red</option>
+                <option value="pink">Pink</option>
+                <option value="green">Green</option>
+                <option value="violet">Violet</option>
+                <option value="orange">Orange</option>
+            </select>                
+        </div>
+        <p></p>
+        <div id="dvBranch">
+            <output id="lblbran"></output>
+            <input type="text" name="txtBran" id="txtBran" maxlength="100" placeholder="Branch" />
+            <label for="txtBran">Branch:</label>
+            <select id="selBranchC">
+                <option selected="selected" value="yellow">Yellow</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="pink">Pink</option>
+                <option value="green">Green</option>
+                <option value="violet">Violet</option>
+                <option value="orange">Orange</option>
+            </select>                
+        </div>
+        <p></p>
+        <div>
+            <output id="lblMessage"></output>
+            <textarea name="txtMessage" id="txtMessage" rows="4" placeholder="Message" maxlength="250"></textarea><label for="txtMessage">Message:</label>
+        </div>
+        <p></p>
+        <div id="lblIn0" style="background-color:#0026ff;">
+            <label id="lblInbox0" style="background-color:#ffd800;"></label>
+        </div>
+        <div>
+            <input type="button" id="btnOrg" value="1: NewOrganisation" /><br />
+            <input type="button" id="btnBran" value="2: NewBranch" /><br />
+            <input type="button" id="btnJOrg" value="3: Join The Organisation" /><br />
+            <input type="button" id="btnJBran" value="4: Join The Branch" /><br />
+            <input type="submit" id="btnAdmin" value="5: Admin" /><br />
+            <a href="#inbox"><input type="button" id="btnMessage" value="6: SendMessage" /></a><br />
+        </div>
+        <p></p>
+    </form>
+    <p></p>
+    <div class="dlist">
+        <ul>
+            <li><a href="#frmMs">New organisation</a></li>
+            <li><a href="#frmMs">New branch</a></li>
+            <li><a href="#frmMs">Join the organisation</a></li>
+            <li><a href="#frmMs">Join the branch</a></li>
+            <li><a href="#frmMd">View and send messages</a></li>
+            <li><a href="#infoMess">View appointments</a></li>
+            <li><a href="#">Admin1</a></li>
+            <li><a href="../Index.aspx">Log out</a></li>
+        </ul>
+    </div>
+    <p></p>
+    <a href="#todo"><input type="button" id="btnHelp" value="Help"/></a>
+    <a href="#dlist"><input type="button" id="btnInfo" value="Info" /></a>
+    <a href="#infoAdm2"><input type="button" id="btnCAdm" value="Admin2" /></a>
+    <input type="button" id="btnExit" value="Exit" />
+    <p></p><hr />
+    <div id="frmMd"></div>
+    <div id="lblIn1" style="background-color:#0026ff;">
+        <label id="lblInbox1" style="background-color:#ff0000;"></label>
+    </div>
+    <h3>Inbox:</h3>
+    <div class="inbox">
+        <table id="inMessage" cellpadding="3" cellspacing="1" border="1">
+            <tr>
+                <th>Post#</th>
+                <th>Message</th>
+                <th>Author</th>
+                <th>Time</th>
+            </tr>
+            <tr><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+        </table>
+        <ol id="inMessage2">
+            <li style="background-color:#808080;"><strong>Inbox:</strong></li>
+        </ol>
+    </div>
+    <div id="lblIn2" style="background-color:#0026ff;">
+        <label id="lblInbox2" style="background-color:#ffd800;"></label>
+    </div>
+    <hr />
+    <div id="infoOrg">
+        INFO:1
+    </div>
+    <hr />
+    <div id="infoBranch">
+        INFO:2
+    </div>
+    <hr />
+    <div id="infoUser">
+        INFO:3
+    </div>
+    <hr />
+    <div id="infoCustomer">
+        INFO:4
+    </div>
+    <hr />
+    <div id="infoG">
+        INFO:5
+    </div>
+    <hr />
+    <div id="infoMess">
+        INFO:6
+    </div>
+    <hr />
+    <div id="infoAdm2">
+        INFO:7
+    </div>
+    <hr />
+    <div class="log"></div>
+    <hr /><p></p>
+    <footer id="ftApp" name="ftApp">
+        <small>(c)2018 BM</small> 
+    </footer>
+</body>
+</html>

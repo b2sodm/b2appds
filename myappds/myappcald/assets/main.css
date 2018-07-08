@@ -1,0 +1,104 @@
+﻿/* 2018 myappds main.css */
+
+html, body, div  {
+    margin: 10px;
+    padding: 5px;
+    border: 10px;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+#todo {
+    background-color: pink;
+}
+
+form > div {
+    position: relative;
+}
+
+form.frmHello label {
+    position: absolute;
+    top: -10px;
+    bottom: 100%;
+    left: 3px;
+    transition: all 0.2s linear;
+    color: snow;
+    font-size: 12px;
+}
+
+    form.frmHello label:hover {
+        top: 50%;
+        color: blueviolet;
+    }
+
+input:focus + label, textarea:focus + label {
+    background-color: aqua;
+    left: 10px;
+    top: -20px;
+    bottom: 90%;
+}
+
+input:hover + label, textarea:hover + label, output:hover {
+    margin-bottom: 1px;
+    border: 1px solid red;
+    padding: 3px 2px;
+    background-color: yellow;
+    color: red;
+    top: 80%;
+}
+
+input:focus, textarea:focus {
+    color: goldenrod;
+}
+
+form {
+    width: 600px;
+    margin: 2em auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    border: groove 12px threedface;
+}
+
+fieldset {
+    position: relative;
+    margin: 12px;
+    padding: 12px;
+}
+
+legend {
+    padding: 2px;
+}
+
+form.frmHello output {
+    color: blue;
+}
+
+.dlist {
+    background-color:blueviolet;
+    border: dotted solid #ff006e;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+#result {
+    border: 2px solid red;
+    background-color: lightskyblue;
+    padding: 10px 10px 0 10px;
+    margin-top: 10px;
+}
+
+#result p {
+    margin: 0 0 10px 0;
+}
+
+.inbox {
+    background-color: deepskyblue;
+    border: dotted solid #ff0000;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* 2018 myappds main.css */

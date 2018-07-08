@@ -1,0 +1,24 @@
+﻿Notes
+
+1.
+Browsers act as clients.
+
+2.
+SignalR offers the possibility of grouping connections based on whatever criteria we deem relevant. 
+To manage those groups, we use the groups property, available in the PersistentConnection class. 
+The groups do not need to exist previously nor do they require any kind of additional managing. 
+They are created when the first connection is added to them and are automatically eliminated when they become empty.
+
+Due to the scalability of SignalR, we cannot obtain information about the groups.
+If we want it, we must implement it, outside SignalR.
+
+3.
+We will be using the forms-based authentication.
+We will use the database for the information to authenticate a user on a web application.
+
+4.
+We will store information about groups in a database.
+
+5.
+We will store information about users in a database.
+
