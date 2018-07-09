@@ -1,7 +1,8 @@
 ﻿
 /////////////////////////////
-//Readme.txt
+//    Readme.txt
 /////////////////////////////
+
 
 
 The system starts at Index.aspx.
@@ -12,14 +13,12 @@ Users can start at Index.aspx, and click on the menu / list.
 
 The system uses database.
 The program uses sql connection.
-The program uses MSSQL or SQLEXPRESS
+The program uses MSSQL or SQLEXPRESS.
 Data base settings at models/DbSetting. 
 
 Other settings at \myappds\.vs\config or at applicationhost.config.
 
-
 <!--
-
     IIS configuration sections.
 
     For schema documentation, see
@@ -34,12 +33,9 @@ Other settings at \myappds\.vs\config or at applicationhost.config.
           %IIS_SITES_HOME% - The default home directory for sites
           %IIS_BIN% - The location of the IIS Express binaries
           %SYSTEMDRIVE% - The drive letter of %IIS_BIN%
-
 -->
-
 <configuration>
     <!--
-
         The <configSections> section controls the registration of sections.
         Section is the basic unit of deployment, locking, searching and
         containment for configuration settings.
@@ -124,9 +120,8 @@ Other settings at \myappds\.vs\config or at applicationhost.config.
     
 </configuration>
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-Enjoy!
-
-/////////
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    Enjoy!
+//
+//////////////////////////////////////////////
