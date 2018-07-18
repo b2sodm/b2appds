@@ -11,6 +11,7 @@
 </head>
 <body>
     <a href="../Index.aspx">Log out</a>
+    <div  class="bApp">Appointments</div>
     <hr />
     <h1>AppDS(Online)</h1>
     <section id="todo">
@@ -94,10 +95,10 @@
             <input type="button" id="btnJOrg" value="3: Join The Organisation" /><br />
             <input type="button" id="btnJBran" value="4: Join The Branch" /><br />
             <input type="submit" id="btnAdmin" value="5: Admin" /><br />
-            <a href="#inbox"><input type="button" id="btnMessage" value="6: SendMessage" /></a><br />
         </div>
         <p></p>
     </form>
+    <a href="#infoMess"><input type="button" id="btnMessage" value="6: SendMessage" /></a>
     <p></p>
     <div class="dlist">
         <ul>
@@ -105,8 +106,9 @@
             <li><a href="#frmMs">New branch</a></li>
             <li><a href="#frmMs">Join the organisation</a></li>
             <li><a href="#frmMs">Join the branch</a></li>
-            <li><a href="#frmMd">View and send messages</a></li>
-            <li><a href="#infoMess">View appointments</a></li>
+            <li><a href="#bApp2">View and send messages</a></li>
+            <li><a href="#bApp2">View appointments</a></li>
+            <li><a href="#bApp2">Make appointments</a></li>
             <li><a href="#">Admin1</a></li>
             <li><a href="../Index.aspx">Log out</a></li>
         </ul>
@@ -167,11 +169,16 @@
     <div id="infoAdm2">
         INFO:7
     </div>
+    <div id="bApp2">
+        <input type="button" id="btnApp2" value="Appointments" />
+        <input type="button" id="btnOrg2" value="Organisations" />
+        <input type="button" id="btnBra2" value="Branches" />
+    </div>
     <hr />
     <div class="log"></div>
     <hr /><p></p>
     <footer id="ftApp" name="ftApp">
-        <small>(c)2018 BM</small> 
+        <small>(C) 2018 BM</small> 
     </footer>
 </body>
 </html>

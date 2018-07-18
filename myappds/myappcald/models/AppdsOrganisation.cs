@@ -24,7 +24,6 @@ namespace myappcald.models
         models.DbSetting dbSetting = null;
         Thread thr;
         AppdsOrganisation thrp;
-        //int thrn;
 
         public AppdsOrganisation(int orcode, string orname, int opcode, string opname, string opinfo, string optype, int orbranch, string ornotes)
         {
@@ -47,6 +46,15 @@ namespace myappcald.models
             pbranch = orbranch;
             notes = ornotes.Trim(cTrim);
         }
+
+        public AppdsOrganisation(int ucode, string uname, string utype)
+        {
+            Char[] cTrim = { '"', ' ', '<', '>', ';', '=', '\\', ',', '\'', '-', '+', '#' };
+            pcode = ucode;
+            pname = uname.Trim(cTrim);
+            ptype = utype.Trim(cTrim);
+        }
+
         //
         private void Dvalidate()
         {
@@ -126,6 +134,18 @@ namespace myappcald.models
             //
             return ucode;
         }
+        //
+        public List<object> OrgAdmnVL()
+        {
+            //Char[] cTrim = { '"', ' ', '<', '>', ';', '=', '\\', ',', '\'', '-', '+', '#' };
+            //string orgnamep = orgName.Trim(cTrim);
+            //string db_sch_tbl = @"[dbads].[dbads].[tblorganisation]";
+            //string pqc = @"select orgcode, orgname from "+ db_sch_tbl + "where orgname = "+ orgName;
+            //string pqc = @"select ucode, pname, ptype, organisation, disabled from dbads.tblorguser where pcode = '" + pucodep + "';";
+            string pqc = @"select orgname from dbads.tblorganisation where pcode = '" + pcode + "';";
+            return Dbads(pqc);
+        }
+        //
 
         //
         private void Register()

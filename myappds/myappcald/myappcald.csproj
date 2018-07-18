@@ -91,6 +91,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="admin2\AppDs.aspx" />
+    <Content Include="admin2\OrBrMeAp.aspx" />
+    <Content Include="admin2\OrgBranchM.aspx" />
     <Content Include="admin\BranchAdmin.aspx" />
     <Content Include="admin\BranchUserAdm.aspx" />
     <Content Include="admin\CustomerAdmin.aspx" />
@@ -117,14 +120,37 @@
     <Content Include="scripts\jquery.signalR-2.1.2.js" />
     <Content Include="scripts\jquery.signalR-2.1.2.min.js" />
     <Content Include="scripts\Myappds.js" />
+    <Content Include="scripts\Myappdsb.js" />
     <Content Include="scripts\Myappdv.js" />
     <Content Include="views\inbox.html" />
     <Content Include="views\Login.aspx" />
     <Content Include="views\myappds.html" />
+    <Content Include="views\myappdsb.html" />
     <Content Include="views\Registration.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin2\AppDs.aspx.cs">
+      <DependentUpon>AppDs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin2\AppDs.aspx.designer.cs">
+      <DependentUpon>AppDs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin2\OrBrMeAp.aspx.cs">
+      <DependentUpon>OrBrMeAp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin2\OrBrMeAp.aspx.designer.cs">
+      <DependentUpon>OrBrMeAp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin2\OrgBranchM.aspx.cs">
+      <DependentUpon>OrgBranchM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin2\OrgBranchM.aspx.designer.cs">
+      <DependentUpon>OrgBranchM.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\Branch.cs" />
     <Compile Include="admin\BranchAdmin.aspx.cs">
       <DependentUpon>BranchAdmin.aspx</DependentUpon>

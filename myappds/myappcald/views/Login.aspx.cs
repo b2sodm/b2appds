@@ -25,6 +25,8 @@ namespace myappcald.views
         string strBrowser, strUrl, strIP;
         string name, email, passwd, puser, info;
         const String Pname = "myappcald";
+        const int Logt = 313;
+        const int Logts = 363;
         int lptoken, lpticks;
         long pticks, ptt;
         List<string> pList = new List<string>();
@@ -62,7 +64,6 @@ namespace myappcald.views
             ph += "<br>M: " + pm.Pmessage();
             ph += "<br>T: " + pm.Ptime();
             placeHolder.Controls.Add(new LiteralControl(ph.ToString()));
-
         }
 
         protected void BtnLogin_Click(object sender, EventArgs e)
@@ -189,7 +190,15 @@ namespace myappcald.views
                     Response.Write("<br>Active#: " + act);
                     if(act != "f")
                     {
-                        Response.Redirect("myappds.html?code=" + code + ",name=" + name + ",type=" + type + ",org=" + org + ",bran=" + bran + "");
+                        //
+                        int tsc = DateTime.Now.Second;
+                        var tlog = Logt * (int)code * tsc;
+                        var tlog1 = tsc * Logts;
+                        var tlog2 = tlog + "p" + tlog1 + "pT" + lpt.GetHashCode().ToString() + "T";
+                        HttpCookie tlog3 = new HttpCookie("info0", tlog2);
+                        Response.Cookies.Add(tlog3);
+                        //
+                        Response.Redirect("myappds.html?code=" + code + ",name=" + name + ",type=" + type + ",org=" + org + ",bran=" + bran + ",dinfo=");
                     }
                    
                 }

@@ -15,7 +15,7 @@ namespace myappcald.models
         private string pname;
         private string info;
         private string ptype;
-        private int bracodev;
+        //private int bracodev;
         private string errq;
         private SqlConnection sconnp;
         List<string> pList = new List<string>();
@@ -23,6 +23,8 @@ namespace myappcald.models
         Thread thr;
         AppdsUserBranch thrp;
         private int codev;
+
+        //
 
         //
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -55,8 +57,19 @@ namespace myappcald.models
             ptype = pptype.Trim(cTrim);
             codev = 610161;
         }
+
+        public AppdsUserBranch(int usscode, string uname, string utype, string porgname, string pbranchn)
+        {
+            Char[] cTrim = { '"', ' ', '<', '>', ';', '=', '\\', ',', '\'', '-', '+', '#' };
+            pcode = usscode;
+            pname = uname.Trim(cTrim);
+            ptype = utype.Trim(cTrim);
+            orgname = porgname.Trim(cTrim);
+            braname = pbranchn.Trim(cTrim);
+        }
+
         //
-        
+
         //
         private void Dvalidate()
         {
@@ -175,6 +188,19 @@ namespace myappcald.models
             //
             return ucode;
         }
+        //
+        //
+        public List<object> BranchUserVL()
+        {
+            //Char[] cTrim = { '"', ' ', '<', '>', ';', '=', '\\', ',', '\'', '-', '+', '#' };
+            //string orgnamep = orgName.Trim(cTrim);
+            //string db_sch_tbl = @"[dbads].[dbads].[tblorganisation]";
+            //string pqc = @"select orgcode, orgname from "+ db_sch_tbl + "where orgname = "+ orgName;
+            //string pqc = @"select ucode, pname, ptype, organisation, disabled from dbads.tblorguser where pcode = '" + pucodep + "';";
+            string pqc = @"select branch from dbads.tblbranchuser where pcode = '" + pcode + "' and organisation ='" + orgname + "';";
+            return Dbads(pqc);
+        }
+        //
 
         //
         private void Register()

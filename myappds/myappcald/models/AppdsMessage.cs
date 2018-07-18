@@ -21,15 +21,16 @@ namespace myappcald.models
         private string notes;
         private string message;
         const String Pname = "myappcald";
-        int lptoken;
-        long pticks, ptt;
+        //int lptoken;
+        //long pticks, ptt;
         List<string> pList = new List<string>();
         SqlConnection sconnp = null;
         models.DbSetting dbSetting = null;
         Thread thr;
         AppdsMessage thrp;
-        int thrn;
+        //int thrn;
         private int mcodev;
+        List<object> pListp = new List<object>();
 
         public AppdsMessage(int pmcode, int ppcode, string ppname, string ppsurname, string pemail, string pptype, string pinfo, string porganisation, string ppbranch, string pmessage, string pnotes)
         {
@@ -56,10 +57,34 @@ namespace myappcald.models
             notes = pnotes.Trim(cTrim);
             //
             DateTime t = DateTime.Now;
-            pticks = t.Ticks;
+            //pticks = t.Ticks;
             info = t.ToString();
             //
         }
+
+        public AppdsMessage(int usscode, string uname, string utype, string orgname, string branchname, string dmess)
+        {
+            Char[] cTrim = { '"', ' ', '<', '>', ';', '=', '\\', ',', '\'', '-', '+', '#' };
+            pcode = usscode;
+            pname = uname.Trim(cTrim);
+            ptype = utype.Trim(cTrim);
+            organisation = orgname.Trim(cTrim);
+            pbranch = branchname.Trim(cTrim);
+            message = dmess.Trim(cTrim);
+            /////////////////////////////////////////////////////
+            //
+            ////////////////////////////////////////////////////////////////
+            //
+            DateTime t = DateTime.Now;
+            //pticks = t.Ticks;
+            info = t.ToString();
+            //
+            //pListp.Add(message);
+            var mgl = dmess.Trim(cTrim); 
+            pListp.Add(mgl);
+            //
+        }
+
         //
         private void Dvalidate()
         {
@@ -163,6 +188,18 @@ namespace myappcald.models
             //
             return ucode;
         }
+        //
+        public List<object> MessUserVL()
+        {
+            //Char[] cTrim = { '"', ' ', '<', '>', ';', '=', '\\', ',', '\'', '-', '+', '#' };
+            //string orgnamep = orgName.Trim(cTrim);
+            //string db_sch_tbl = @"[dbads].[dbads].[tblorganisation]";
+            //string pqc = @"select orgcode, orgname from "+ db_sch_tbl + "where orgname = "+ orgName;
+            //string pqc = @"select ucode, pname, ptype, organisation, disabled from dbads.tblorguser where pcode = '" + pucodep + "';";
+            //string pqc = @"select branch from dbads.tblbranchuser where pcode = '" + pcode + "' and organisation ='" + orgname + "';";
+            //return Dbads(pqc);
+            return pListp;
+        }
 
         //
         private void Register()
@@ -191,6 +228,7 @@ namespace myappcald.models
                                          + "'" + @info + "',"
                                          + "'" + @organisation + "',"
                                          + "'" + @pbranch + "',"
+                                         + "'" + @message + "',"
                                          + "'" + @notes + "')";
                 //
                 var pn = Dbads(pCommand);

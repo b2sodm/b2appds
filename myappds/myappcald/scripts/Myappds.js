@@ -40,25 +40,25 @@ var ecountp = 0;
 var myOrg = {
     oname: "orgName",
     oadmn: "OrgAdmin"
-}
+};
 //alert(myOrg.oname);
 var myBra = {
     bname: "braName",
     oname: "OrgN",
     badmn: "BraAdmin"
-}
+};
 //alert(myBra.bname);
 var mCust = {
     cname: "cName",
     oname: "oName",
     bname: "bName"
-}
+};
 //alert(mCust.cname);
 var mGuest = {
     gname: "gName",
     oname: "oName",
     bname: "bName"
-}
+};
 //alert(mGuest.gname);
 var mUser = {
     uname: "uName",
@@ -66,14 +66,14 @@ var mUser = {
     bname: "bName",
     ptype: "Ptype",
     ucode: "uCode"
-}
+};
 //alert(mUser.uname);
 var myMess = {
     oname: "oName",
     bname: "bName",
     uname: "uName",
     mess: "mMess"
-}
+};
 //alert(myMess.mess);
 //var xMess = myMess;
 //alert(xMess);
@@ -170,7 +170,7 @@ $(function () {
             /////////////////////////////////////////////////////////////
         });
         $('#btnOrg').click(function () {
-            if (orgp == "")
+            if (orgp === "")
             {
                 alert("ORG:  ? " + orgp);
             }
@@ -182,12 +182,12 @@ $(function () {
         });
         $('#btnBran').click(function () {
             var brh = 0;
-            if (orgp == "")
+            if (orgp === "")
             {
                 brh += 1;
                 alert("ORG: ? " + orgp);
             }
-            if (branchp == "")
+            if (branchp === "")
             {
                 brh += 1;
                 alert("BRA: ? " + branchp);
@@ -283,13 +283,15 @@ var urlLL2;
 //alert("dLoc: " + dLocation);
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //aUrl: http://localhost:49368/views/myappds.html?code=CODE,name=NAME,type=TYPE,org=ORG,bran=BRAN
+//http://localhost:49368/views/myappdsb.html?code=Code,name=Name,type=Type,org=oName,bran=bName,dinfo=
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 var urlList3;
 var urlList4;
 var urlList5;
 var urlList6;
 var urlList7;
-var urlListL = 5;
+//var urlListL = 5;
+var urlListL = 6;
 var urlListA;
 //
 function init() {
@@ -403,6 +405,18 @@ function ToIndex()
     //window.location = "http://localhost:49368/Index.aspx";
 }
 //
+///////////////////////////////////////////////////////////////////
+function ToMyappdsb() {
+    urlListA = urlList[0].split("/views");
+    //alert(urlListA[0]);
+    window.location = urlListA[0] + "/views/myappdsb.html?code=" + mUser.ucode + ",name=" + mUser.uname + ",type=" + mUser.ptype + ",org=" + mUser.oname + ",bran=" + mUser.bname + ",dinfo=";
+    //window.location = "http://localhost:49368/Index.aspx";
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    //aUrl: http://localhost:49368/views/myappds.html?code=CODE,name=NAME,type=TYPE,org=ORG,bran=BRAN
+    //http://localhost:49368/views/myappdsb.html?code=Code,name=Name,type=Type,org=oName,bran=bName,dinfo=
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+}
+//
 //
 //
 $(document).ready(function () {
@@ -507,7 +521,7 @@ $(document).ready(function () {
         branchp = $('#txtBran').val();
         orgp = $('#txtOrg').val();
         ymessage = $('#txtMessage').val();
-        if ((orgp === "") | (branchp == "")) {
+        if ((orgp === "") | (branchp === "")) {
             alert("JORG: ? " + orgp + " : " + branchp);
         }
         else {
@@ -558,13 +572,18 @@ $(document).ready(function () {
             var orgname = orgp.trim();
             var branchname = branchp.trim();
             var ymess = ymessage.trim();
-            var messl = [orgname, branchname, namep, codep, typep, ymess];
-            $("#infoMess").load("/admin/MessageAdmin.aspx?messad=" + messl);
+            var dinfo = "0";
+            //var messl = [orgname, branchname, namep, codep, typep, ymess, dinfo];
+            //$("#infoMess").load("/admin/MessageAdmin.aspx?messad=" + messl);
             msq = "2";
             if (ymess === "")
             {
                 alert("Mess: ? " + ymess);
                 $('#txtMessage').focus();
+            }
+            else
+            {
+                ToMyappdsb();
             }
         }
         if (messq === "0")
@@ -578,6 +597,7 @@ $(document).ready(function () {
         {
             //alert(messq);
             messq = "0";
+            $('#txtMessage').val('');
         }
         //return false;
     });
@@ -614,21 +634,40 @@ $(document).ready(function () {
         ToIndex();
     });
     $('#btnCAdm').click(function () {
-        //
-        branchp = $('#txtBran').val();
-        orgp = $('#txtOrg').val();
-        ymessage = $('#txtMessage').val();
-        var orgname = orgp.trim();
-        var branchname = branchp.trim();
-        var ymess = ymessage.trim();
-        var corgl = [orgname, branchname, namep, codep, typep, ymess];
-        $("#infoAdm2").load("/admin/CustomerAdmin.aspx?corgad=" + corgl);
-        //
+        ToMyappdsb();
+        ///////////////////////////////////////////
+        //branchp = $('#txtBran').val();
+        //orgp = $('#txtOrg').val();
+        //ymessage = $('#txtMessage').val();
+        //var orgname = orgp.trim();
+        //var branchname = branchp.trim();
+        //var ymess = ymessage.trim();
+        //var corgl = [orgname, branchname, namep, codep, typep, ymess];
+        //$("#infoAdm2").load("/admin/CustomerAdmin.aspx?corgad=" + corgl);
+        ///////////////////////////////////////////////////////////////////
     });
     $('#btnAdmin').click(function () {
         //ymessage = $('#txtMessage').val();
         $('#txtOrg').focus();
         return false;
+    });
+    //
+    //////////////////////////////////////////////////////////////
+    $('#btnApp2').click(function () {
+        //alert("App2...");
+        ToMyappdsb();
+    });
+    $('#btnOrg2').click(function () {
+        //alert("Org2...");
+        ToMyappdsb();
+    });
+    $('#btnBra2').click(function () {
+        //alert("Bra2...");
+        ToMyappdsb();
+    });
+    $(".bApp").click(function () {
+        //alert("App...");
+        ToMyappdsb();
     });
 });
 //
@@ -711,15 +750,14 @@ window.onload = function ()
 //
 //
 //
-window.onerror = function (msg, url, ln)
-{
+window.onerror = function (msg, url, ln) {
     //alert("WMess: " + msg);
     //alert("Url: " + url);
     //alert("L#: " + ln);
     emess.push(msg);
     emess.push(url);
     emess.push(ln);
-}
+};
 //
 //alert("2018Done1");
 //

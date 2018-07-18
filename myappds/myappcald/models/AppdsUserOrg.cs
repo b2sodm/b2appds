@@ -25,6 +25,17 @@ namespace myappcald.models
         private string pymess;
         private string ppinfo;
 
+        public AppdsUserOrg(int ucodep, string unamep, string utypep, string orgn)
+        {
+            Char[] cTrim = { '"', ' ', '<', '>', ';', '=', '\\', ',', '\'', '-', '+', '#' };
+            //
+            punamep = unamep.Trim(cTrim);
+            pucodep = ucodep;
+            putypep = utypep.Trim(cTrim);
+            porgname = orgn.Trim(cTrim);
+            //
+        }
+
         public AppdsUserOrg(string orgname, string branchname, string unamep, int ucodep, string utypep, string ymess, string info)
         {
             var trpn = 501;
@@ -163,6 +174,37 @@ namespace myappcald.models
             //
         }
         //
+        //
+        //int ucodep, string unamep, string utypep
+        public List<object> OrgCustomerVL(int orgAdmn, string orgName)
+        {
+            Char[] cTrim = { '"', ' ', '<', '>', ';', '=', '\\', ',', '\'', '-', '+', '#' };
+            string orgnamep = orgName.Trim(cTrim);
+            //string db_sch_tbl = @"[dbads].[dbads].[tblorganisation]";
+            //string pqc = @"select orgcode, orgname from "+ db_sch_tbl + "where orgname = "+ orgnamep;
+            string pqc = @"select ucode, pcode, pname, ptype, organisation, disabled from dbads.tblorguser where organisation = '" + orgnamep + "';";
+            var ucd = orgAdmn;
+            if(ucd == pucodep)
+            {
+                return Dbads(pqc);
+            }
+            else
+            {
+                pqc = @"select ucode, pname, ptype, organisation, disabled from dbads.tblorguser where pcode = '" + pucodep + "';";
+                return Dbads(pqc);
+            }
+        }
+        //
+        public List<object> OrgUserVL()
+        {
+            //Char[] cTrim = { '"', ' ', '<', '>', ';', '=', '\\', ',', '\'', '-', '+', '#' };
+            //string orgnamep = orgName.Trim(cTrim);
+            //string db_sch_tbl = @"[dbads].[dbads].[tblorganisation]";
+            //string pqc = @"select orgcode, orgname from "+ db_sch_tbl + "where orgname = "+ orgName;
+            //string pqc = @"select ucode, pname, ptype, organisation, disabled from dbads.tblorguser where pcode = '" + pucodep + "';";
+            string pqc = @"select organisation from dbads.tblorguser where pcode = '" + pucodep + "';";
+            return Dbads(pqc);
+        }
         //
         public List<object> InfOrgL(string orgName)
         {
