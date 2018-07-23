@@ -1,4 +1,3 @@
-
 README
 
 
@@ -9,6 +8,9 @@ PathTo\myappds\myappcald\views
 PathTo\myappds\myappcald\scripts
 PathTo\myappds\myappcald\admin2
 
-These 3 files are encrypted.
+Invoice is at:
+// data/invoice/invoice2.txt
+
+These files are encrypted.
 The program to decrypt them is at the data folder.
 // data/Myappdsb.exe
