@@ -10,6 +10,12 @@ namespace myappcald.admin
     public partial class CustomerAdmin : System.Web.UI.Page
     {
         private int usscode;
+        private string orgname;
+        private string branchname;
+        private string namep;
+        private string codep;
+        private string typep;
+        private string ymess;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -35,12 +41,12 @@ namespace myappcald.admin
                 Response.Write("<br> UNL: " + orl + "<br>");
                 Response.Write("<br> UName: " + orgadml + "<br>");
                 var l2 = orgadml.Split(',');
-                var orgname = l2[0];
-                var branchname = l2[1];
-                var namep = l2[2];
-                var codep = l2[3];
-                var typep = l2[4];
-                var ymess = l2[5];
+                orgname = l2[0].Trim(cTrim);
+                branchname = l2[1].Trim(cTrim);
+                namep = l2[2].Trim(cTrim);
+                codep = l2[3].Trim(cTrim);
+                typep = l2[4].Trim(cTrim);
+                ymess = l2[5].Trim(cTrim);
                 //
                 Response.Write("<br> Organisation: " + orgname + "<br>");
                 Response.Write("<br> Branch: " + branchname + "<br>");
@@ -48,6 +54,9 @@ namespace myappcald.admin
                 Response.Write("<br> Code: " + codep + "<br>");
                 Response.Write("<br> Mess: " + ymess + "<br>");
                 usscode = Int32.Parse(codep);
+                adminCode.Value = codep;
+                usrOrg.Value = orgname;
+                usrBra.Value = branchname;
                 //
                 //AppdsOrganisation(int orcode, string orname, int opcode, string opname, string opinfo, string optype, int orbranch, string ornotes);
                 //AppdsBranch(string branchname, string orgname, int usscode, string uname, string v, string utype)
@@ -60,6 +69,12 @@ namespace myappcald.admin
             /////////////////////////////////////////////////////////////////
             //
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        }
+
+        protected void BtnOk223_Click(object sender, EventArgs e)
+        {
+
+            Response.Write("OK..");
         }
     }
 }

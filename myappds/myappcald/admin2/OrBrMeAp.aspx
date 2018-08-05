@@ -10,6 +10,8 @@
     <h3>OrBrMeAp</h3>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="lblOrBr" BackColor="#ffcc00" runat="server"></asp:Label>
+            <asp:Calendar ID="calOrBr" BackColor="#ff00ff" runat="server"></asp:Calendar>
         </div>
     </form>
 </body>

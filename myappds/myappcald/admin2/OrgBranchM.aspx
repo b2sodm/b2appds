@@ -13,7 +13,14 @@
     <input type="text" id="txtVo" runat="server" /><br />
     <input type="button" id="btnVo" value="Select" runat="server" /><br />
     <input type="button" id="btnVb" value="Select" runat="server" /><br />
+    <input type="text" id="txbInfo" readonly="true" runat="server" /><br />
     <script type="text/javascript" lang="javascript">
+        var subm2 = document.getElementById("txbInfo");
+        var btnAdV3 = document.createElement("button");
+        var btnId3 = $("#txbInfo").val();
+        btnAdV3.textContent = "OK_" + btnId3;
+        btnAdV3.id = "" + btnId3;
+        subm2.parentNode.appendChild(btnAdV3);
         $(document).ready(function () {
             //alert("OrgReady");
             $('#btnVo').click(function () {
@@ -35,6 +42,7 @@
                     //alert(txt);
                     $("#txtVo").val("");
                 }
+                
             });
             //
             $('#btnVb').click(function () {
@@ -47,8 +55,9 @@
 
                 if ($.inArray(txt, lst2) !== -1) {
                     $("#txtBran").val(txt);
-                    $("#txtBran").focus();
+                    //$("#txtBran").focus();
                     $("#txtVo").val("");
+                    Resetv();
                 }
                 else {
                     //alert(txt);
@@ -56,7 +65,33 @@
                 }
             });
             //
+            ////////ms3////////
+            //
+            $("#" + btnId3).click(function () {
+                //alert("To Admin3...");
+                Resetv();
+            });
+            
+            //////////////////////////////////////////////////
         });
+        //
+        //alert("OK!");
+        function Resetv() {
+            $("#txtVo").val("");
+            $("#btnAppCal").focus();
+            $("#infoOrg").hide("slow");
+            $("#infoBranch").hide("slow");
+            $("#infoMess").hide("slow");
+            $("#infoOrgAdmn").hide("slow");
+            $("#infoBraAdmn").hide("slow");
+            $("#infoCustomer").hide("slow");
+            $("#infoApp").hide("slow");
+            $("#infoAppAdmn").hide("slow");
+            $("#infoUser").hide("slow");
+            $("#info101").hide("slow");
+            //
+        }
+        //
     </script>
     </body>
 </html>

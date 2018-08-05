@@ -22,3 +22,16 @@ We will store information about groups in a database.
 5.
 We will store information about users in a database.
 
+6.
+The project uses the following programming languages and frameworks.
+a) HTML
+b) JavaScript
+c) SQL
+d) .Net
+e) JQuery
+f) Ajax
+g) Json
+h) SignalR
+
+7.
+Enjoy!

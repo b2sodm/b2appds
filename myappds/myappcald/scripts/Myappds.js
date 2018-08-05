@@ -357,7 +357,7 @@ function init() {
     $('#lblIn2').hide('slow');
     $('#lblIn1').hide('slow');
     $('#lblIn0').hide('slow');
-    if (typep != "User")
+    if (typep !== "User")
     {
         $('#btnOrg').hide('slow');
         $('#btnBran').hide('slow');

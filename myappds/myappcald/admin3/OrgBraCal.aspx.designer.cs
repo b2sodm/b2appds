@@ -7,243 +7,315 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace myappcald.admin {
+namespace myappcald.admin3 {
     
     
-    public partial class CustomerAdmin {
+    public partial class OrgBraCal {
         
         /// <summary>
-        /// frmCad22 control.
+        /// txbOrg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frmCad22;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txbOrg;
         
         /// <summary>
-        /// lblAd22 control.
+        /// txbBra control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblAd22;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txbBra;
         
         /// <summary>
-        /// adminCode control.
+        /// txbCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText adminCode;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txbCode;
         
         /// <summary>
-        /// lblCo22 control.
+        /// txbName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCo22;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txbName;
         
         /// <summary>
-        /// usrCode control.
+        /// txbType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText usrCode;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txbType;
         
         /// <summary>
-        /// lblNa22 control.
+        /// btnMore control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblNa22;
+        protected global::System.Web.UI.HtmlControls.HtmlInputButton btnMore;
         
         /// <summary>
-        /// usrName control.
+        /// lblDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText usrName;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblDate;
         
         /// <summary>
-        /// lblSu22 control.
+        /// frmOrgCal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblSu22;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmOrgCal;
         
         /// <summary>
-        /// usrSurname control.
+        /// txbDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText usrSurname;
+        protected global::System.Web.UI.WebControls.TextBox txbDate;
         
         /// <summary>
-        /// lblEm22 control.
+        /// DdlH control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblEm22;
+        protected global::System.Web.UI.WebControls.DropDownList DdlH;
         
         /// <summary>
-        /// usrEmail control.
+        /// DdlM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl usrEmail;
+        protected global::System.Web.UI.WebControls.DropDownList DdlM;
         
         /// <summary>
-        /// lblOr22 control.
+        /// DdlAPM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblOr22;
+        protected global::System.Web.UI.WebControls.DropDownList DdlAPM;
         
         /// <summary>
-        /// usrOrg control.
+        /// DdlSl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText usrOrg;
+        protected global::System.Web.UI.WebControls.DropDownList DdlSl;
         
         /// <summary>
-        /// lblBr22 control.
+        /// DdlSc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblBr22;
+        protected global::System.Web.UI.WebControls.DropDownList DdlSc;
         
         /// <summary>
-        /// usrBra control.
+        /// txbInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText usrBra;
+        protected global::System.Web.UI.WebControls.TextBox txbInfo;
         
         /// <summary>
-        /// lblDs22 control.
+        /// calOrg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblDs22;
+        protected global::System.Web.UI.WebControls.Calendar calOrg;
         
         /// <summary>
-        /// usrDis control.
+        /// BtnCal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect usrDis;
+        protected global::System.Web.UI.WebControls.Button BtnCal;
         
         /// <summary>
-        /// lblNt22 control.
+        /// Btnhelp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblNt22;
+        protected global::System.Web.UI.WebControls.Button Btnhelp;
         
         /// <summary>
-        /// usrNotes control.
+        /// LblH control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText usrNotes;
+        protected global::System.Web.UI.WebControls.Label LblH;
         
         /// <summary>
-        /// BtnOk2 control.
+        /// BtnViewC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnOk2;
+        protected global::System.Web.UI.WebControls.Button BtnViewC;
         
         /// <summary>
-        /// lblOk2 control.
+        /// btnView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblOk2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputButton btnView;
         
         /// <summary>
-        /// BtnUp2 control.
+        /// btnExit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnUp2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputButton btnExit;
         
         /// <summary>
-        /// lblUp2 control.
+        /// lblInfo1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblUp2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblInfo1;
         
         /// <summary>
-        /// BtnDe2 control.
+        /// lblInfo2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDe2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblInfo2;
         
         /// <summary>
-        /// lblDe2 control.
+        /// lblInfo3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblDe2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblInfo3;
         
         /// <summary>
-        /// txbInf2 control.
+        /// txbInfo3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbInf2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txbInfo3;
+        
+        /// <summary>
+        /// txbOrgA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txbOrgA;
+        
+        /// <summary>
+        /// txbBraA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txbBraA;
+        
+        /// <summary>
+        /// txbCodeA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txbCodeA;
+        
+        /// <summary>
+        /// txbNameA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txbNameA;
+        
+        /// <summary>
+        /// txbTypeA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txbTypeA;
+        
+        /// <summary>
+        /// btnMoreA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputButton btnMoreA;
+        
+        /// <summary>
+        /// btnSelA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputButton btnSelA;
+        
+        /// <summary>
+        /// btnOkA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputButton btnOkA;
     }
 }

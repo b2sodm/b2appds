@@ -8,8 +8,10 @@
 </head>
 <body>
     <h3>AppDs</h3>
-    <form id="form1" runat="server">
+    <form id="frmAppDs" runat="server">
         <div>
+            <asp:Label ID="lblAppDs" ForeColor="#cc3300" runat="server"></asp:Label><br />
+            <asp:Button ID="btnAppDs" ForeColor="#cc3300" Text="OK" runat="server" /><br />
         </div>
     </form>
 </body>

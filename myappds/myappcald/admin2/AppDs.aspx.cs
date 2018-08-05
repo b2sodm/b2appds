@@ -11,7 +11,8 @@ namespace myappcald.admin2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var t = DateTime.Now;
+            lblAppDs.Text = t.ToString();
         }
     }
 }

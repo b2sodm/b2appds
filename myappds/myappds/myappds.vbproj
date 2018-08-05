@@ -92,6 +92,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin3\OrgBraCal.aspx" />
     <Content Include="admin\OrgAdmin.aspx" />
     <Content Include="docs\Readme2.txt" />
     <Content Include="Global.asax" />
@@ -101,6 +102,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin3\OrgBraCal.aspx.designer.vb">
+      <DependentUpon>OrgBraCal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin3\OrgBraCal.aspx.vb">
+      <DependentUpon>OrgBraCal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="admin\OrgAdmin.aspx.designer.vb">
       <DependentUpon>OrgAdmin.aspx</DependentUpon>
     </Compile>

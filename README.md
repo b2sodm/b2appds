@@ -13,6 +13,16 @@ The program uses MSSQL or SQLEXPRESS
 Data base settings at models/DbSetting.
 Db scripts at db. 
 
+The project uses the following programming languages and frameworks.
+a) HTML
+b) JavaScript
+c) SQL
+d) .Net
+e) JQuery
+f) Ajax
+g) Json
+h) SignalR
+
 For more details please see the docs at myappds\myappcald\docs.
 
 Enjoy!
